@@ -3,6 +3,8 @@ package edu.wctc.isp;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -21,11 +23,19 @@ public class Main {
                 13.54, 18,
                 LocalDate.of(2011, Month.APRIL, 12),
                 "Miles Davis", Duration.ofMinutes(46));
+        Product testRecord = new VinylRecord("Test Record", 19.99, 999,
+                LocalDate.of(2023, Month.NOVEMBER, 14),
+                "Test McTestFace", Duration.ofMinutes(60));
 
-        System.out.println(book1.toString());
-        System.out.println("\n");
-        System.out.println(book2.toString());
-        System.out.println("\n");
-        System.out.println(record.toString());
+        List<Product> products = new ArrayList<>();
+        products.add(book1);
+        products.add(book2);
+        products.add(record);
+        products.add(testRecord);
+
+        for (Product product : products) {
+            System.out.println(product.toString());
+            System.out.println("\n");
+        }
     }
 }

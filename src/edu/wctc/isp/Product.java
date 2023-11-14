@@ -1,30 +1,20 @@
 package edu.wctc.isp;
 
-import java.time.Duration;
 import java.time.LocalDate;
 
 public interface Product {
 
-    String getArtist();
-
-    String getAuthor();
-
-    double getCost();
-
+    //get the things that are similar from Album and Book
+    //Then put those in here instead!
+    //Title + release dates go here.
+    String getTitle();
+    LocalDate getReleaseDate();
     String getFormattedReleaseDate();
 
-    String getISBN();
-
-    int getPages();
-
-    Duration getPlayingTime();
-
+    //Cost + Quantity go here.
+    double getCost();
     int getQuantityOnHand();
 
-    LocalDate getReleaseDate();
-
-    String getTitle();
-
+    //Finish it off with order.
     void order(int quantity);
-
 }
